@@ -2,12 +2,12 @@
   <%= form_tag('/articles', method: :post) do %>
   <div class="row">
     <div class="input-field col s12">
-      <input placeholder="title" class="materialize-textarea" name="title"></textarea>
+      <input placeholder="タイトル" class="materialize-textarea" name="title">
 
-      <textarea placeholder="text" class="materialize-textarea" name="text"></textarea>
+      <textarea placeholder="本文" class="materialize-textarea" name="text"></textarea>
 
       <button class="btn waves-effect waves-light" type="submit" name="action">
-        <i class="material-icons">post</i>
+        <i class="material-icons">投稿する</i>
       </button>
 
     </div>

@@ -17,14 +17,29 @@
 
 .header-wrapper {
   float: right;
-      text-align: right;
-      a.post {
-        @extend .btn;
-        width: 120px;
-        display: inline-left;
-        margin-left: 10px;
+  text-align: right;
+}
+a.post {
+    @extend .btn;
+    width: 120px;
+    display: inline-left;
+    margin-left: 10px;
 }
 
 .card-action a{
-  min-width: 300px;
+    min-width: 100px;
+    text-align: center;
+    color: white;
+}
+
+
+.delete-button {
+  float: right;
+  background-color: gray;
+}
+
+#delete-link {
+  text-align: center;
+  color: white;
+  margin-right: 0px;
 }
