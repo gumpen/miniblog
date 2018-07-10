@@ -1,0 +1,35 @@
+<div class="row">
+  <%= form_tag('/articles', method: :post) do %>
+  <div class="row">
+    <div class="input-field col s12">
+      <input placeholder="title" class="materialize-textarea" name="title"></textarea>
+
+      <textarea placeholder="text" class="materialize-textarea" name="text"></textarea>
+
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons">post</i>
+      </button>
+
+    </div>
+  </div>
+  <% end %>
+</form>
+</div>
+
+<!--
+    <%= form_tag('/articles', method: :post) do %>
+    <input placeholder="Nickname" type="text" name="name">
+    <input placeholder="Image Url" type="text" name="image">
+    <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
+    <input type="submit" value="SENT">
+    <% end %> -->
+<!--
+
+<%= form_tag('/articles', method: :post) do %>
+<%= label_tag :名前 %>
+<%= text_field_tag :name %>
+<%= label_tag :内容 %>
+<%= text_area_tag :content %>
+<%= submit_tag "追加" %>
+<% end %>
+-->
