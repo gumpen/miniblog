@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+
+body {
+  background-color: #d7ccc8;
+  /*background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+}
+
+.nav-wrapper {
+  background-color: #6d4c41;
+}
+
+nav .mybrand-logo {
+  color: #d7ccc8;
+  position: absolute;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+  font-family: 'Knewave', cursive;
+}
+
 .container  {
   top: 0;
   left: 0;
@@ -19,27 +41,43 @@
   float: right;
   text-align: right;
 }
-a.post {
+/*a.post {
     @extend .btn;
     width: 120px;
     display: inline-left;
     margin-left: 10px;
-}
+    }*/
 
-.card-action a{
+/*.index_action_btn {
+  @extend .btn
+  background-color: black;
+  }*/
+
+  .card-action a{
     min-width: 100px;
     text-align: center;
     color: white;
-}
+  }
 
 
-.delete-button {
-  float: right;
-  background-color: gray;
+  .delete-button {
+    float: right;
+    background-color: gray;
+  }
+
+  #button-link {
+    text-align: center;
+    color: white;
+    margin-right: 0px;
+  }
+
+  .show-row {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+.post-link {
+  color: #d7ccc8;
+  box-shadow: 0 0 20px 5px #d7ccc8 inset;
 }
 
-#delete-link {
-  text-align: center;
-  color: white;
-  margin-right: 0px;
-}

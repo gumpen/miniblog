@@ -21,11 +21,11 @@
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/articles" class="brand-logo">miniblog2</a>
+        <a href="/articles" class="mybrand-logo">miniblog!</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if user_signed_in? %>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :get %></li>
-          <li><%= link_to "投稿する", "/articles/new", method: :get %></li>
+          <li><%= link_to "投稿する", "/articles/new", method: :get,class: "post-link" %></li>
           <% else %>
           <li><%= link_to "ログイン", new_user_session_path %></li>
           <li><%= link_to "ユーザー登録", new_user_registration_path %></li>

@@ -1,0 +1,17 @@
+<div class="row">
+  <%= form_tag("/articles/#{@article.id}", method: :patch) do %>
+  <div class="row">
+    <div class="input-field col s12">
+      <input placeholder="タイトル" class="materialize-textarea" name="title" value="<%= @article.title %>">
+
+      <textarea placeholder="本文" class="materialize-textarea" name="text"><%= @article.text %></textarea>
+
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons">更新する</i>
+      </button>
+
+    </div>
+  </div>
+  <% end %>
+</form>
+</div>
