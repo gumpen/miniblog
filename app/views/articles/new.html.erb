@@ -1,35 +1,12 @@
 <div class="row">
-  <%= form_tag('/articles', method: :post) do %>
+  <%= form_for @article do |f| %>
   <div class="row">
     <div class="input-field col s12">
-      <input placeholder="タイトル" class="materialize-textarea" name="title">
-
-      <textarea placeholder="本文" class="materialize-textarea" name="text"></textarea>
-
-      <button class="btn waves-effect waves-light brown darken-3" type="submit" name="action">
-        <i class="material-icons">投稿する</i>
-      </button>
-
+      <%= f.text_field :title, placeholder: "タイトル", class: "materialize-textarea" %>
+      <%= f.text_area :text, placeholder: "本文", class: "materialize-textarea" %>
+      <%= button_tag type: "submit", class: "btn waves-effect waves-light brown darken-3" do %>投稿する<i class="material-icons"></i>
+      <% end %>
     </div>
   </div>
   <% end %>
-</form>
 </div>
-
-<!--
-    <%= form_tag('/articles', method: :post) do %>
-    <input placeholder="Nickname" type="text" name="name">
-    <input placeholder="Image Url" type="text" name="image">
-    <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
-    <input type="submit" value="SENT">
-    <% end %> -->
-<!--
-
-<%= form_tag('/articles', method: :post) do %>
-<%= label_tag :名前 %>
-<%= text_field_tag :name %>
-<%= label_tag :内容 %>
-<%= text_area_tag :content %>
-<%= submit_tag "追加" %>
-<% end %>
--->

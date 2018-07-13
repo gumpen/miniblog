@@ -4,10 +4,11 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def create
-    Article.create(title: params[:title], text: params[:text],user_id: current_user.id)
+    Article.create(create_params)
     redirect_to action: :index
   end
 
@@ -18,6 +19,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @comment = Comment.new
+    @comments = @article.comments.includes(:user)
   end
 
   def edit
@@ -36,5 +39,10 @@ class ArticlesController < ApplicationController
   private
   def article_params
     params.permit(:title, :text)
+  end
+
+  private
+  def create_params
+    params.require(:article).permit(:title, :text).merge(user_id: current_user.id)
   end
 end

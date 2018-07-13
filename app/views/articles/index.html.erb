@@ -1,13 +1,17 @@
 <div class="container">
   <% @articles.each do |article| %>
   <div class="content-wrapper">
-  <div class="row valign-wrapper">
-    <div class="col s12">
+    <div class="row valign-wrapper">
+      <div class="col s12">
 
         <div class="card grey lighten-5">
           <div class="card-content black-text">
             <span class="card-title"><%= article.title %></span>
             <p><%= article.text %></p>
+          </div>
+          <div class="date-wrapper">
+            <span>name:<%= article.user.nickname %></span>
+            <span>date:<%= article.updated_at.in_time_zone('Asia/Tokyo').strftime('%Y/%m/%d %H:%M:%S') %></span>
           </div>
           <div class="card-action">
             <div class="waves-effect waves-light btn">
@@ -18,7 +22,7 @@
               <%= link_to '編集する', "/articles/#{article.id}/edit",method: :get, id: "button-link" %>
             </div>
             <div class="waves-effect waves-light btn delete-button">
-            <%= link_to '削除する', "/articles/#{article.id}",method: :delete, id: "button-link" %>
+              <%= link_to '削除する', "/articles/#{article.id}",method: :delete, id: "button-link" %>
             </div>
             <% end %>
           </div>

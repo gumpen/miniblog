@@ -1,14 +1,39 @@
-  <div class="show-row">
-    <div class="col s12 m5">
-      <div class="card-panel teal">
-        <span class="white-text">
-          <%= @article.title %>
-        </span>
-      </div>
-      <div class="card-panel teal">
-        <span class="white-text">
-          <%= @article.text %>
-        </span>
-      </div>
+<div class="show-row">
+  <div class="col s12 m5">
+    <div class="card-panel brown lighten-1">
+      <span>タイトル：</span>
+      <span class="white-text">
+        <%= @article.title %>
+      </span>
+    </div>
+    <div class="card-panel brown lighten-1">
+      <span>本文：</span>
+      <span class="white-text">
+        <%= @article.text %>
+      </span>
     </div>
   </div>
+</div>
+<hr>
+<div class="comment-show-row">
+  <%= form_for [@article,@comment] do |f| %>
+  <div class="col s12 m5">
+    <h4>コメント</h4>
+    <%= f.text_area :text, placeholder: "コメント", class: "materialize-textarea" %>
+    <%= button_tag type: "submit", class: "btn waves-effect waves-light brown darken-3" do %>コメント投稿<i class="material-icons"></i>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+<hr>
+<div class="comments">
+  <h4>＜コメント一覧＞</h4>
+  <% if @comments %>
+  <% @comments.each do |comment| %>
+  <p>
+    <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+    <%= comment.text %>
+  </p>
+  <% end %>
+  <% end %>
+</div>

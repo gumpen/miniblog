@@ -33,8 +33,19 @@ nav .mybrand-logo {
 }
 
 .content-wrapper {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
+}
+
+.card-content {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.card-content:hover {
+  opacity: 0.5;
 }
 
 .header-wrapper {
@@ -79,5 +90,14 @@ nav .mybrand-logo {
 .post-link {
   color: #d7ccc8;
   box-shadow: 0 0 20px 5px #d7ccc8 inset;
+}
+
+.date-wrapper {
+  text-align: right;
+  padding: 1px 10px;
+}
+
+.date-wrapper span {
+  margin: 0 0 0 10px;
 }
 
