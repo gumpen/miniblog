@@ -49,6 +49,14 @@ test:
 #
 production:
   <<: *default
-  database: miniblog2_production
-  username: miniblog2
-  password: <%= ENV['MINIBLOG2_DATABASE_PASSWORD'] %>
+  database: ENV['DB_NAME']
+  username: ENV['DB_USERNAME']
+  password: ENV['DB_PASSWORD']
+  host: ENB['DB_HOSTNAME']
+  # username: ba94b628065cc1
+  # password: 84c0b895
+  # host: us-cdbr-iron-east-04.cleardb.net
+  # db_name: heroku_941d4110069eb0f
+  # database: miniblog2_production
+  # username: miniblog2
+  # password: <%= ENV['MINIBLOG2_DATABASE_PASSWORD'] %>
