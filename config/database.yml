@@ -52,7 +52,7 @@ production:
   database: ENV['DB_NAME']
   username: ENV['DB_USERNAME']
   password: ENV['DB_PASSWORD']
-  host: ENB['DB_HOSTNAME']
+  host: ENV['DB_HOSTNAME']
   # username: ba94b628065cc1
   # password: 84c0b895
   # host: us-cdbr-iron-east-04.cleardb.net
